@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDoList</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+<p>To Do List</p>
+<div class="grid-container">
+    <div class="person-box" th:each="person : ${personList}">
+        <div th:text="${person.name}"></div>
+
+        <div class="todolist-container">
+            <div class="todolist" th:each="todo : ${person.toDoLists}" th:value="${todo.state}">
+                <input th:type="checkbox" th:if="${todo.state == 4}" th:checked="checked">
+                <label th:text="${todoStat.count} + '. ' + ${todo.content}">
+                </label>
+            </div>
+        </div>
+
+        <button class="button--delete" th:value="${personStat.count}" th:text="Clear" th:disabled="disabled"></button>
+    </div>
+</div>
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>
