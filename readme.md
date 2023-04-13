@@ -1,3 +1,6 @@
+### 1. To-Do List 만들기
+![Honeycam 2023-04-14 01-12-15](https://user-images.githubusercontent.com/31733276/231820911-16ce7084-9565-478a-8c6e-e1f6df9e36b8.gif)
+
 ### 3. DATE - SQL
 [전제 조건]
 
