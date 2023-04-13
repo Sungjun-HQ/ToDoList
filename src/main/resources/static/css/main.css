@@ -22,6 +22,18 @@ html {
     box-shadow: inset 0px 0px 0px 1px black;
 }
 
+div[value="2"] {
+    background: #FFC898;
+}
+
+div[value="3"] {
+    background: #FFDEFA;
+}
+
+div[value="4"] {
+    background: #CDF2CA;
+}
+
 .button--delete {
     margin-top: auto;
     width: 15%;
@@ -37,10 +49,11 @@ html {
 }
 
 .dropdown-content {
-    display: none;
+    /*display: none;*/
+    visibility: hidden;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
+    /*min-width: 160px;*/
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -50,11 +63,28 @@ html {
     /*background-color: #3e8e41;*/
 }
 
-.dropdown-content a {
+.dropdown-content button {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    width: 120px;
+}
+
+.dropdown-content button:nth-child(1) {
+    background: white;
+}
+
+.dropdown-content button:nth-child(2) {
+    background: #FFC898;
+}
+
+.dropdown-content button:nth-child(3) {
+    background: #FFDEFA;
+}
+
+.dropdown-content button:nth-child(4) {
+    background: #CDF2CA;
 }
 
 .dropdown a:hover {
@@ -62,5 +92,6 @@ html {
 }
 
 .show {
-    display: block;
+    /*display: block;*/
+    visibility: visible;
 }

@@ -18,7 +18,14 @@ public interface ToDoRepository extends CrudRepository<ToDo, Long> {
     @Modifying
     @Query("DELETE " +
             "FROM ToDo t " +
-            "WHERE t.person.id = :person_id")
+            "WHERE t.person.id = :id")
     @Transactional
-    void deleteAllByPersonId(@Param("person_id") int person_id);
+    void deleteAllByPersonId(@Param("id") long id);
+
+    @Modifying
+    @Query("UPDATE ToDo t " +
+            "SET t.state = :state " +
+            "WHERE t.id = :id")
+    @Transactional
+    void updateById(@Param("id") long id, @Param("state") int state);
 }

@@ -26,8 +26,14 @@ public class ToDoController {
     }
 
     @DeleteMapping("/todolist/{id}")
-    public void deleteToDoList(@PathVariable int id) {
+    public void deleteToDoList(@PathVariable long id) {
 //        todolistRepository.deleteById(id);
         todolistRepository.deleteAllByPersonId(id);
     }
+
+    @PutMapping("/todolist/{id}/{state}")
+    public void updateToDoList(@PathVariable long id, @PathVariable int state) {
+        todolistRepository.updateById(id, state);
+    }
+
 }

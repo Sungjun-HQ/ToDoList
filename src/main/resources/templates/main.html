@@ -14,7 +14,7 @@
         <div class="todolist-container">
             <div class="todolist" th:each="todo : ${person.toDoLists}" th:value="${todo.state}">
                 <input th:type="checkbox" th:if="${todo.state == 4}" th:checked="checked">
-                <label th:text="${todoStat.count} + '. ' + ${todo.content}">
+                <label th:value="${todo.id}" th:text="${todoStat.count} + '. ' + ${todo.content}">
                 </label>
             </div>
         </div>
